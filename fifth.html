@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        function check(){
+            mystring = document.getElementById("str").value;
+            console.log(mystring);
+            s = (mystring.split(/(?!$)/u)).reverse();
+            rev_string = (s.join("")).toString()
+            document.write("The reverse string is :" + " "+ rev_string)
+            if (rev_string == mystring){
+                document.write("<br>The string " + mystring + " is <b>Palindrome</b> !!")
+            }else{
+                document.write("<br>The string " + mystring + " is <b>NOT </b>Palindrome !!")
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Reverse the string and Check the given string is palindrome or not!</h2>
+    <input text="text" id="str">
+    <button onclick="check()">submit</button>
+    <p id="rev"></p>
+
+    
+</body>
+</html>

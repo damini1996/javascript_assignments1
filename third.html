@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function f2c(){
+        fahrenheit = document.getElementById("demo").value
+        celsius = (fahrenheit -32 )/1.8000
+        document.write("The convertion into celsius is : " + celsius)
+
+    }
+
+    function c2f(){
+        celsius = document.getElementById("demo").value
+        fahrenheit = (celsius*1.8000) + 32.00
+        document.write("The convertion into celsius is : " + fahrenheit)
+
+
+
+    }
+
+    // function convert(value){
+    //     if (id=="f2c"){
+    //         console.log(id)
+    //         document.getElementById("f2c").innerHTML()=f2c()
+
+    //     }else{
+    //         document.getElementById("c2f").innerHTML()=f2c()
+
+    //     }
+    // }
+</script>
+</head>
+<body>
+    <h2>Conversation Fahrenheit to Celsius or vise versa!!</h2>
+    <input type="text" id="demo">
+    <button id ="f2c"  onclick="f2c()">Fahrenheit to Celsius</button>
+    <button id ="c2f"  onclick="c2f()">Celsius to Fahrenheit</button>
+    
+</body>
+</html>

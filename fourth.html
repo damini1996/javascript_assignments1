@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function check(){
+        number = document.getElementById("no").value
+        var range = []
+        for(var i=50;i<=100;i++){
+            range = range +","+ i;
+        }
+        if (range.includes(number)){
+                document.write("<b>The no " + number +" is the range b/w 50 to 100<b>")
+        }else{
+            document.write("The no " + number +"<b> NOT </b> in the range b/w 50 to 100")
+        }
+            
+        
+
+
+
+    }
+</script>
+</head>
+<body>
+    <h3>Check whether a no is in range 50 to 100 or not!</h3>
+    <input text="text" id="no">
+    <button id="ch" onclick="check()">Check</button>
+    
+</body>
+</html>

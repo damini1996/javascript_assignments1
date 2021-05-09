@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function newDoc() {
+  window.location.assign("https://selfregistration.cowin.gov.in")
+}
+
+    function cal(){
+        date_of_dob = document.getElementById("dob").value;
+        console.log(date_of_dob);
+        actual = date_of_dob.split('/')
+        var age;
+
+        var d = new Date();
+        console.log(d)
+        day =  d.getDate();
+        month = d.getMonth()+1;
+        year = d.getFullYear();
+
+        a_days = Math.abs(day - actual[0])
+        a_month = Math.abs(month - actual[1])
+        a_year = Math.abs(year - actual[2])
+
+        //document.write("The age of a person is : " + a_year + "year" +" " + a_month + "month and" + " " + a_days +"days");
+        if (a_year>=18 && a_year<=44) {
+            document.getElementById("but").innerHTML = newDoc();
+
+        }else{
+            document.write("<h2>Age is less than 18 or greater than 44 !</h2>")
+        }
+        
+    }
+
+    
+    
+
+
+</script>
+<body>
+    <h2>The person whose age is b/w 18 to 44 are eligible for vaccination!!</h2>
+    <h3>Enter your DOB in the format(dd/mm/yy)</h3>
+    <input text="text" id="dob"></input>
+    <p id=val></p>
+    <button id="but" onclick="cal()" >Submit</button>
+    
+
+    
+</body>
+</html>
+
+

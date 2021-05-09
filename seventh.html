@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function strip_tags(value){
+            val = value.toString();
+            striptag = val.replace( /(<([^>]+)>)/ig, '')
+            return striptag;
+
+
+
+        }
+
+        // function test(){
+        //     console.log("<p><strong><em>Skillsanta Assignments</em></strong></p>")
+        // }
+
+        document.write(strip_tags("<p><strong><em>Skillsanta Assignments</em></strong></p>"))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--console.log(strip_tags('<p><strong><em>Skillsanta Assignments</em></strong></p>'))-->
